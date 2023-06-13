@@ -12,7 +12,7 @@ A API permite fazer as seguintes ações:
 -   Excluir uma conta bancária
 
 
-### Estrutura do objeto no arquivo `bancodedados.js`
+### Estrutura do objeto no arquivo `bancodedados.json`
 
 ```javascript
 {
