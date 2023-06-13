@@ -4,7 +4,7 @@ A API permite fazer as seguintes ações:
 
 -   Criar conta bancária
 -   Atualizar os dados do usuário da conta bancária
--   Depósitar em uma conta bancária
+-   Depositar em uma conta bancária
 -   Sacar de uma conta bancária
 -   Transferir valores entre contas bancárias
 -   Consultar saldo da conta bancária
