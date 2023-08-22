@@ -11,31 +11,8 @@ A API permite fazer as seguintes ações:
 -   Emitir extrato bancário
 -   Excluir uma conta bancária
 
-
+Se caso você não tiver um front-end, poderá consumir os dados da API através de um cliente HTTP. Como por exemplo o Insominia ou Postman
 ### Estrutura do objeto no arquivo `bancodedados.json`
-
-```javascript
-{
-    banco: {
-        nome: "Cubos Bank",
-        numero: "123",
-        agencia: "0001",
-        senha: "Cubos123Bank",
-    },
-    contas: [
-        // array de contas bancárias
-    ],
-    saques: [
-        // array de saques
-    ],
-    depositos: [
-        // array de depósitos
-    ],
-    transferencias: [
-        // array de transferências
-    ],
-}
-```
 
 ## Endpoints
 
@@ -85,8 +62,6 @@ A API permite fazer as seguintes ações:
 
 #### `POST` `/contas`
 
-Esse endpoint deverá criar uma conta bancária, onde será gerado um número único para identificação da conta (número da conta).
-
 -   Entradas
 
     -   Nome
@@ -129,8 +104,6 @@ Esse endpoint deverá criar uma conta bancária, onde será gerado um número ú
 
 #### `PUT` `/contas/:numeroConta/usuario`
 
-Esse endpoint deverá atualizar apenas os dados do usuário de uma conta bancária.
-
 -   Entradas
 
     -   Nome
@@ -162,8 +135,6 @@ Esse endpoint deverá atualizar apenas os dados do usuário de uma conta bancár
 
 #### `DELETE` `/contas/:numeroConta`
 
-Esse endpoint deve excluir uma conta bancária existente.
-
 -   Entradas
 
     -   Numero da conta bancária (passado como parâmetro na rota)
@@ -190,8 +161,6 @@ Esse endpoint deve excluir uma conta bancária existente.
 ### Depositar
 
 #### `POST` `/transacoes/depositar`
-
-Esse endpoint deverá somar o valor do depósito ao saldo de uma conta válida e registrar essa transação.
 
 -   Entrada
 
@@ -231,8 +200,6 @@ Esse endpoint deverá somar o valor do depósito ao saldo de uma conta válida e
 
 #### `POST` `/transacoes/sacar`
 
-Esse endpoint deverá realizar o saque de um valor em uma determinada conta bancária e registrar essa transação.
-
 -   Entrada
 
     -   Número da conta
@@ -271,8 +238,6 @@ Esse endpoint deverá realizar o saque de um valor em uma determinada conta banc
 ### Tranferir
 
 #### `POST` `/transacoes/transferir`
-
-Esse endpoint deverá permitir a transferência de recursos (dinheiro) de uma conta bancária para outra e registrar essa transação.
 
 -   Entrada
 
@@ -314,8 +279,6 @@ Esse endpoint deverá permitir a transferência de recursos (dinheiro) de uma co
 
 #### `GET` `/contas/saldo?numero_conta=123&senha=123`
 
-Esse endpoint deverá retornar o saldo de uma conta bancária.
-
 -   Entrada (query params)
 
     -   Número da conta
@@ -350,8 +313,6 @@ function saldo(...) {
 ### Extrato
 
 #### `GET` `/contas/extrato?numero_conta=123&senha=123`
-
-Esse endpoint deverá listar as transações realizadas de uma conta específica.
 
 -   Entrada (query params)
 
